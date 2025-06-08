@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+
+  <!-- Link icon logo(favicon) in title bar -->
+  <link rel="icon" href="/image/icon.png" type="image/x-icon">
+
+  <!-- Link Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Link Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+
+  <!--  Link Stylesheets -->
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/style/responsive.css">
+
+  <!-- Link jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+  <!-- Link google font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Vidaloka&family=Amaranth&display=swap"
+    rel="stylesheet">
+
+  <!-- Link fontawesome -->
+  <script src="https://kit.fontawesome.com/bb0d234825.js"></script>
+
+<body>
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid p-0">
+        <a class="navbar-brand link" href="#">
+          <img src="/image/icon.png" alt=".." width="35" height="35" class="mx-3 align-text-center">
+          <strong>Save The Strays</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-align-right text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active link" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="#donation">Donation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="#our-work">Our Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="#updates">Updates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="#about-us">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Rest of header section - home page -->
+    <div class="container text-center" id="home">
+      <div class="row">
+        <div class="col-md-7 col-sm-12">
+          <h6 class="font2"><em>Every Whisker deserves a chance</em></h6>
+          <h1>Give hope. Give warmth. <br> Give life</h1>
+          <p class="font2">Stray cats need savior. Get involved, become a donor, and give every cat a 
+            fair chance at a safe and loving life.</p>
+
+        <div class="btn">
+          <div style="margin-right: 10px;">
+            <form action="/donRegister" method="get">
+              <button id="b1" style="background-color: #ff6f61; color: white;" class="btn rounded-pill px-4 py-2 shadow">Sign Up</button>
+            </form>
+          </div>
+          <div>
+            <form action="/donlogin" method="get">
+              <button id="b2" style="background-color: black; color: white;" class="btn rounded-pill px-4 py-2 shadow">Sign In</button>
+            </form>
+          </div>
+        </div>
+
+        </div>
+        <div class="col-md-5 col-sm-12">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- DONATION PAGE -->
+    <!-- DINA'S CONTENT-->
+    <section class="donation" id="donation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="pray">
+              <img src="/image/cat4.jpg" alt="..">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="panel text-left">
+              <h1>Donation Page</h1>
+              <p class="pt-3">
+                Bridge The Gap is one such catalyst from the cluster of organizations working in development sector with
+                an objective of working for the social upliftment of the backward section of the society.
+              </p>
+              <p>
+                The education schemes devised by the organization are in such a manner which focuses majorly on
+                providing education to children right from pre-schooling years till they complete their higher
+                education. Bridge The Gap has given wings to girl students as well so that they can fly in their careers
+                with beautiful colours.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DONATION TRACKER SECTION -->
+    <section class="our-work container-fluid p-0" id="our-work">
+      <div class="cover">
+        <div class="content text-center">
+          <h1>Our Work</h1>
+          <p>Work Section</p>
+        </div>
+      </div>
+      <div style="position: absolute" class="container-fluid text-center">
+        <div class="numbers d-flex flex-md-row flex-wrap justify-content-center">
+            <div class="container d-flex justify-content-center">
+              <div class="tracker text-center p-4" style="max-width: 400px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+                <h2>Fundraising Progress</h2>
+                <div class="progress-bar" style="background-color: #ddd; border-radius: 20px; overflow: hidden; height: 35px; margin: 20px 0;">
+                  <div class="progress" id="progressBar" style="background-color: #4caf50; height: 100%; width: 0%; color: black; text-align: center; line-height: 30px;">0%</div>
+                </div>
+                <div class="amount-text fw-bold">
+                  Raised: RM<span id="raised">0</span> / RM<span id="goal">1000</span>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG/UPDATES SECTION -->
+<link rel="stylesheet" href="/style/blog.css">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+
+<!-- SHA'S CONTENT -->
+ <div class="text-center mb-5">
+  <h2 style="font-family: var(--font1); font-size: 7vmin;">Latest Updates & Blog</h2>
+</div>
+
+
+<!-- BUTTONS TO NAVIGATE CONTENT DETAILS-->
+<div class="dashboard-content" id="updates">
+  <div class="card-container"> 
+    <div class="card">
+      <h3 class="title">Projects</h3>
+      <div class="bar"><div class="filledbar"></div></div>
+      <div class="circle">
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <circle class="stroke" cx="60" cy="60" r="50" />
+          <image href="/image/projects2.png" x="33" y="30" width="55" height="55" />
+        </svg>
+        <!-- Button start to navigate to new web page -->
+        <button class="button" onclick="window.location.href='cvprofile.html'">START</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 class="title">Success Stories</h3>
+      <div class="bar"><div class="filledbar"></div></div>
+      <div class="circle">
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <circle class="stroke" cx="60" cy="60" r="50" />
+         <image href="/image/success.png" x="33" y="30" width="55" height="55" />
+        </svg>
+        <!-- Button start to navigate to new web page -->
+        <button class="button" onclick="window.location.href='clothing.html'">START</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 class="title">Upcoming Events</h3>
+      <div class="bar"><div class="filledbar"></div></div>
+      <div class="circle">
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <circle class="stroke" cx="60" cy="60" r="50" />
+         <image href="/image/events.png" x="33" y="30" width="55" height="55" />
+        </svg>
+        <!-- Button start to navigate to new web page -->
+        <button class="button" onclick="window.location.href='qna.html'">START</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 class="title">Subscribe</h3>
+      <div class="bar"><div class="filledbar"></div></div>
+      <div class="circle">
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <circle class="stroke" cx="60" cy="60" r="50" />
+         <image href="/image/subscribe.png" x="33" y="30" width="55" height="55" />
+        </svg>
+      <!-- Button start to navigate to new web page -->
+        <button class="button" onclick="window.location.href='leaderboard.html'">START</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer>
+      <!-- About Us -->
+      <div class="container-fluid p-0" id="about-us">
+        <div class="row text-left">
+          <div class="col-md-4">
+            <h1 class="text-light">About Us</h1>
+            <p class="text-muted">Bridge The Gap exists to alleviate poverty by enabling the world to give donations for
+              strays cat.</p>
+            <p class="pt-2 text-muted">Copyright © All Rights Reserved</p>
+            <p class="pt-2 text-light">Developed <i class="fas fa-heart beat"></i> by Group 4</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+
+
+  <!-- inline javascript code -->
+
+  <script>
+        /** Fundraising Goals */
+
+      const goal = 1000;
+      const raised = <%= totalSum %>; // You can dynamically change this
+
+      const progressBar = document.getElementById('progressBar');
+      const percent = Math.min((raised / goal) * 100, 100);
+      progressBar.style.width = percent + '%';
+      progressBar.textContent = Math.floor(percent) + '%';
+
+      document.getElementById('raised').textContent = raised;
+      document.getElementById('goal').textContent = goal;
+      
+
+    /** Sticky navigation */
+
+    let navbar = $(".navbar");
+
+    $(window).scroll(function () {
+      let oTop = $(".our-work").offset().top - window.innerHeight;
+      if ($(window).scrollTop() > oTop) {
+        navbar.addClass("sticky");
+      }
+      else {
+        navbar.removeClass("sticky");
+      }
+    });
+
+    /** Counter animation */
+
+    let nCount = function (selector) {
+      $(selector).each(function () {
+        $(this).animate({
+          Counter: $(this).text()
+        },
+          {
+            duration: 4000,
+            easing: "swing",
+            step: function (value) {
+              $(this).text(Math.ceil(value));
+            }
+          }
+        );
+      });
+    };
+
+    let a = 0;
+    $(window).scroll(function () {
+      let oTop = $(".our-work").offset().top - window.innerHeight;
+      if (a == 0 && $(window).scrollTop() >= oTop) {
+        a++;
+        nCount(".rect > h1")
+      }
+    });
+
+    /** Prevent content jump when sticky navbar appears */
+
+    function jumpsPrevent() {
+      stickyHeight = navbar.innerHeight();
+      navbar.css({ "margin-bottom": "-" + stickyHeight + "px" });
+      navbar.next().css({ "padding-top": + stickyHeight + "px" });
+    };
+    jumpsPrevent(); // Run.
+
+    // Function trigger:
+    $(window).resize(function () {
+      jumpsPrevent();
+    });
+
+  </script>
+
+</body>
+
+</html>

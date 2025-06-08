@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background-image: url("/image/cat5.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      .con {
+        display: flex;
+        align-items: center;
+      }
+      .maincon {
+        margin-top: 100px;
+      }
+      .head {
+        text-align: center;
+      }
+      .con2 {
+        display: flex;
+        justify-content: center;
+      }
+      .content {
+        height: auto;
+        width: 600px;
+        box-shadow: 0 0 5px gray;
+        background-color: white;
+        border-radius: 8px;
+        padding: 30px;
+        margin-bottom: 20px;
+      }
+
+      .spans {
+        max-width: 500px;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .box {
+        margin-top: 10px;
+        margin-left: 10px;
+        box-shadow: 0 0 5px grey;
+        padding: 10px;
+      }
+      select {
+        width: 370px;
+        height: 40px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        background-color: white;
+        border: 2px solid gray;
+      }
+      .address {
+        width: 500px;
+        box-shadow: 0 0 5px grey;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      .address p {
+        margin: 0;
+      }
+      .donate {
+        margin: 20px 0px 0px 0px;
+        display: flex;
+        justify-content: center;
+      }
+      .donate button {
+        height: 50px;
+        width: 150px;
+        background-color: rgb(66 164 199);
+        border-radius: 5px;
+        border: none;
+        color: white;
+      }
+      .donate button:hover {
+        box-shadow: 1px 1px 5px rgb(0, 42, 104);
+      }
+      .btb {
+        height: 40px;
+        width: 100px;
+        background-color: rgb(160, 216, 29);
+        border-radius: 5px;
+        border: none;
+        color: white;
+      }
+      .btb:hover {
+        box-shadow: 1px 1px 5px rgb(11, 114, 27);
+      }
+      #def_in {
+        height: 40px;
+        padding: 10px;
+        border: 1px solid gray;
+        border-radius: 5px;
+      }
+      #inputContainer {
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 10px;
+      }
+      #inputContainer input {
+        margin-right: 10px;
+        margin-top: 12px;
+        text-align: left;
+        border: 2px solid gray;
+      }
+      #inputContainer img {
+        cursor: pointer;
+        margin-top: -5px;
+        height: 40px;
+        width: 40px;
+      }
+      #inputContainer div {
+        display: flex;
+        flex-wrap: wrap-reverse;
+      }
+      #inp1 {
+        height: 40px;
+        padding: 10px;
+        width: 370px;
+        border-radius: 5px;
+      }
+      #inp2 {
+        height: 40px;
+        padding: 10px;
+        width: 20%;
+        border-radius: 5px;
+      }
+      #inp1:focus,
+      #inp2:focus,
+      #org_sel:focus {
+        border: none;
+        outline: 2px solid rgb(1, 1, 93);
+        box-shadow: 0 0 5px rgb(112, 112, 255);
+      }
+      .hed {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .popup {
+        height: 100ch;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.37);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+      }
+      .popChild {
+        background-color: white;
+        height: 220px;
+        width: 420px;
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      #done {
+        height: 40px;
+        width: 100px;
+        border-radius: 5px;
+        border: none;
+        background-color: deepskyblue;
+        box-shadow: 1px 1px 5px gray;
+        color: white;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/don_home">Save The Strays</a>
+        <div class="con">
+          <h3
+            class="navbar-toggler"
+            data-bs-toggle="offcanvas"
+            aria-controls="offcanvasDarkNavbar"
+            aria-label="Toggle navigation"
+            style="border: none"
+          >
+            <%= don_details.Donor_name %>
+          </h3>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">MENU</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#"
+                  style="
+                    background-color: #666699;
+                    padding-left: 20px;
+                    border-radius: 5px;
+                  "
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/don_profile"
+                  >Profile</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/don_history"
+                  >History</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">LogOut</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="maincon">
+      <div class="con2">
+        <div class="content">
+          <div class="hed">
+            <h3 class="additems"><b>Donation Info</b></h3>
+          </div>
+          <form id="medform" action="/donat_med_submit" method="post">
+            <label><b>Donation For: </b></label>
+            <input
+              type="text"
+              name="Donation"
+              value="Deflea & Deworm Medication"
+              id="def_in"
+              style="border: none; outline: none;"
+              readonly
+            />
+            <br>
+
+            <label><b>Cost (RM): </b></label>
+            <input
+              type="text"
+              name="donationCost"
+              value="45"
+              id="def_in"
+              style="border: none; outline: none;"
+              readonly
+            />
+            <hr>
+
+            <h4 style="margin-top: 20px;"><b>Payment Details</b></h4>
+
+            <!-- Card Logos -->
+            <div style="margin-bottom: 15px;">
+              <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" />
+              <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" alt="MasterCard" />
+            </div>
+
+            <!-- Name on Card -->
+            <div class="mb-3">
+              <label for="cardName" class="form-label"><b>Name on Card</b></label>
+              <input type="text" class="form-control" id="cardName" name="cardName" required />
+            </div>
+
+            <!-- Card Number -->
+            <div class="mb-3">
+              <label for="cardNumber" class="form-label"><b>Card Number</b></label>
+              <input type="text" class="form-control" id="cardNumber" name="cardNumber" maxlength="19" placeholder="1234 5678 9012 3456" required />
+            </div>
+
+            <!-- Expiry and CVV in one row -->
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="expiryDate" class="form-label"><b>Expiry Date</b></label>
+                <input type="month" class="form-control" id="expiryDate" name="expiryDate" required />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="cvv" class="form-label"><b>CVV</b></label>
+                <input type="text" class="form-control" id="cvv" name="cvv" maxlength="4" placeholder="123" required />
+              </div>
+            </div>
+
+          </form>
+
+          <div class="donate">
+            <button
+              type="submit"
+              id="don_bt"
+              form="medform"
+              onclick="donate()"
+            >
+              Donate
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="popup">
+        <div class="popChild">
+          <div>
+            <h2 style="color: rgb(1, 184, 1); font-weight: bold">
+              Thank You For Donating.!
+            </h2>
+          </div>
+          <div style="display: flex; justify-content: end">
+            <button id="done">Done</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("done").addEventListener("click", () => {
+        window.location.href = "/don_history";
+      });
+
+      function donate() {
+        // Just show the popup for now; the form will still submit normally.
+        document.querySelector(".popup").style.display = "flex";
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>
