@@ -2,7 +2,7 @@
 
 Open Projek Ni Dalam VSCODE, lepastu open terminal dalam VSCODE and type npm install
 
-Make sure git install dalam directory projek.
+Make sure type npm install dalam directory projek.
 
 # Setup FireBase Database
 
@@ -17,6 +17,6 @@ letak file key.json dalam folder projek ni
 
 # Cara Nak Run Projek
 
-Type dekat terminal node server.js
+Type dekat terminal VSCODE node server.js
 
 lepastu type dekat browser localhost:3000
