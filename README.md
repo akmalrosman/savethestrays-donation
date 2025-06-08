@@ -6,11 +6,13 @@ Make sure type npm install dalam directory projek.
 
 # Setup FireBase Database
 
+Pergi dekat website Firebase signin akaun gmail, lepastu tekan Go To Console
+
 Create Firebase project, and then add app dalam firebase project tadi
 
 Dapatkan private key, pergi dekat app yang dah create tadi lepastu pergi dekat bahagian service accounts and then tekan Generate new private key
 
-nanti aku ada key download dalam file .json
+nanti akan ada key download dalam file .json
 rename nama file tu kepada key.json
 
 letak file key.json dalam folder projek ni
